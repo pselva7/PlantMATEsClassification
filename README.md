@@ -1,4 +1,4 @@
-# 2021-11-15
+# 2021-11-08
 
 # Classification of the MATE gene family in plants
 
@@ -8,8 +8,43 @@ Multidrug and toxic compound extrusion (MATE) proteins form one of the major mul
 # Research probelm
 MATE gene family has been studied well in various plant species and classified into several groups and/or subgroups based on the phylogenetic topology. Notably, all the published MATE gene family studies examined only a limited number (i.e. <5) of plant species and named the phylogenetic clades on their own. **Since a large-scale phylogenomic study has never been conducted as well as a systematic classification has never been proposed, clear contradiction occurs on the naming of groups/ subgroups among the published genome-wide studies of plant MATEs** (see _Table 1_).
 
+**Table 1 |** Discrepancy in the classification of plant MATE gene family (_CGS* denotes clade, class, group and/ or subfamily_)
+|     Plant species           |     CGS*          |     Subgroup                                                                                    |     References             |
+|-----------------------------|-------------------|-------------------------------------------------------------------------------------------------|----------------------------|
+|     Arabidopsis thaliana    |     I – IV        |     /                                                                                           |     Wang et al., 2016      |
+|     Arabidopsis thaliana    |     I – V         |     /                                                                                           |     Santos et al., 2017    |
+|     Brassica rapa           |     1 – 4         |     /                                                                                           |     Qiao et al., 2020      |
+|     Brassica juncea         |     1 – 4         |     /                                                                                           |     Qiao et al., 2020      |
+|     Brassica napus          |     1 – 4         |     /                                                                                           |     Qiao et al., 2020      |
+|     Brassica nigra          |     1 – 4         |     /                                                                                           |     Qiao et al., 2020      |
+|     Brassica oleracea       |     1 – 4         |     /                                                                                           |     Qiao et al., 2020      |
+|     Capsicum annuum         |     I – V         |     /                                                                                           |     Chen et al., 2020      |
+|     Cicer arietinum         |     G1 – G4       |     /                                                                                           |     Zhang et al., 2020     |
+|     Citrus sinensis         |     I – V         |     /                                                                                           |     Juliao et al., 2020    |
+|     Glycine max             |     C1 – C4       |     C1-1, C1-2, C1-3, C2-1, C2-2, C3-1, C3-2, C4-1, C4-2,   C4-3                                |     Liu et al., 2016       |
+|     Gossypium arboreum      |     MI – MIII     |     /                                                                                           |     Lu et al., 2018        |
+|     Gossypium hirsutum      |     C1 – C4       |     C1-1, C1-2, C1-3, C1-4, C1-5, C2, C3, C4                                                    |     Xu et al., 2018        |
+|     Gossypium raimondii     |     MI – MIII     |     /                                                                                           |     Lu et al., 2018        |
+|     Linum usitassimum       |     I – IV        |     /                                                                                           |     Ali et al., 2021       |
+|     Malus × domestica       |     I – VI        |     /                                                                                           |     Zhang et al., 2021     |
+|     Medicago sativa         |     C I – C IV    |     C I-1, C I-2, C I-3, C II-1, C II-2, C III-1, C III-2, C   III-3, C IV-1, C IV-2, C IV-3    |     Min et al., 2019       |
+|     Medicago truncatula     |     I – IV        |     /                                                                                           |     Wang et al., 2017      |
+|     Nicotiana tabacum       |     I – IV        |     Ia, Ib, Ic, Id, Ie, IIa, IIb, IIc, III, IVa, IVb                                            |     Gani et al., 2021      |
+|     Oryza sativa            |     1 – 4         |     /                                                                                           |     Du et al., 2021        |
+|     Oryza sativa            |     C1–C4         |     C1-1, C1-2, C2, C3-1, C3-2, C4-1, C4-2, C4-3, C4-4                                          |     Huang et al., 2019     |
+|     Oryza sativa            |     I – IV        |     /                                                                                           |     Wang et al., 2016      |
+|     Populus trichocarpa     |     I – III       |     Ia, Ib, IIa, IIb, IIc, IIIa, IIIb, IIIc                                                     |     Li et al., 2017        |
+|     Solanum lycopersicum    |     I – V         |     /                                                                                           |     Santos et al., 2017    |
+|     Solanum tuberosum       |     I – V         |     /                                                                                           |     Huang et al., 2021     |
+|     Solanum tuberosum       |     I – VI        |     /                                                                                           |     Li et al., 2019        |
+|     Solanum tuberosum       |     I – V         |     /                                                                                           |     Chen et al., 2020      |
+|     Vaccinium corymbosum    |     I – V         |     /                                                                                           |     Chen et al., 2015      |
+|     Zea mays                |     I – VII       |     /                                                                                           |     Zhu et al., 2016       |
+
 # Resolvement
 To resolve the problem, a kingdom-wide analysis of the MATE gene family and synteny network analyses were performed using 74 species of different plant orders. A total of 4210 MATEs were identified through hmm profile-based search that were classified systematically into 14 subgroups using USERACH, blast+ and synteny network tools. **Classification was performed in four subsequent steps,** in which MATEs sharing ≥60% protein sequence identity (PSI) with ≤1E-05 threshold at different sequence lengths (either at the full-length, ≥60% of its length, or ≥150 amino acids of it) or retaining in the conserved genomic blocks were assigned into the same subgroup. In this way, subgroup was assigned for 95.8% of MATEs identified and the synteny network clustering analysis substantiated it. Subgroups were clustered under four major phylogenetic groups and named according to their clockwise appearance within each group. **To view the distribution of MATE subgroups across the plant kingdom,** see _MATEsDistributionInPlants.pdf_. **To view the comprehensive phylogeny of MATE gene family in plants,** see _PlantMATEsPhylogeny.svg_. **To view the synteny networks in Cytoscape,** use _PlantMATEsSyntenyNetwork.cys_.
+
+
 
 # Classification of plant MATEs via blastp search using RefPlantMATEs dataset
 To assist the classification of MATE gene family in other plant species (i.e. the species not covered in our study), a reference sequence dataset (termed as RefPlantMATEs) was prepared with 3444 MATEs of diverse plant species. Members in the dataset were comprised of 1–2 MATE domains, and their protein and domain lengths were ranged between 351–650 and 79–342 amino acids, respectively. Fasta header of the RefPlantMATEs dataset included five attributes (gene id, species, subgroup, classified criteria and protein length) separated by pipe (|). A bioinformatic pipeline (i.e. PlantMATEsClassification.sh) was then established using simple shell commands to automate the classification. The pipeline was validated with the classification of MATE gene family in wheat (i.e. TaMATEs) as test file in UBUNTU 18.04.
