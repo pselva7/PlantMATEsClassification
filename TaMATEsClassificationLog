@@ -1,0 +1,22 @@
+2021-11-08 18:42:51
+
+### Classification completed successfully ###
+
+You can use the TaMATEsClassificationSummary file for further downstreatm process.
+
+Following are some quick stats:
+There were 226 seqeunces in the input query file. No Non-MATEs were detected.
+
+Group was assigned for all MATE sequences present in the input query file: I 96; II 96; III 15; IV 19.
+
+Subgroup was assigned for 224 of 226 MATE sequences present in the input query file: IA 12; IB 83; IIA 33; IIB 3; IIC 36; IID 10; IIE 13; IIIA 1; IIIB 3; IIIC 5; IIID 6; IVA 3; IVC 16.
+
+You can keep the subgroup unclassified MATE(s) (n = 2) as such or assign them subgroup based on further validation using any other logical criteria (e.g. synteny, phylogeny or relaxed homology condition).
+
+By following the user-defined variable, intermediate files are kept in the Classification directory.
+
+Classification elapsed for 0 hours, 0 minutes and 7 seconds
+
+### END ###
+
+
