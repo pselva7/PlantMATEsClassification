@@ -77,6 +77,6 @@ Three tools are necessiated to perform the automatic classification of MATEs in 
 
 # Limitations
 The piepline is suitable to classify the MATEs of angiosperms. Classification of MATEs from primitive organisms (e.g. algae) is highly unlikely.
-And, I have no idea whether the RefPlantMATEs dataset is usable to classify MATEs from gymnosperms.
+And, I have no idea whether the RefPlantMATEs dataset is usable to classify MATEs from gymnosperms. It is because, no gymnosperm species was analzyed in our study.
 
 **#❗️for any queries reach me at:** pselva7@gmail.com
