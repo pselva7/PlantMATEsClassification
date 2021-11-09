@@ -70,15 +70,11 @@ Three tools are necessiated to perform the automatic classification of MATEs in 
 
    If the outputs show **"_Files ... and ... are identical_", go to step 5.** Otherwise, make sure whether you run the script in the correct environment, whether the tools are installed successfully and/or whether you properly exported the tool's path to ~/.bashrc.
 
-**5.** Now, you are ready to classify the MATEs of your target plant species. **If you already have query protein sequences in a file, go to step 6.** Query sequences (i.e. the MATE-domain (PF01554) containing proteins of your target species) can be obtained by hmmsearch with hmmer3 tool against your target proteome or by using the keyword PF01554 from any public databases (e.g. https://phytozome-next.jgi.doe.gov/). I prefer the hmmsearch method (because, here, we can limit the occurences of non-MATE sequences using gathering threshold (--cut_ga) option) over the public database search (which always includes many non-MATE sequences).  
-**To install hmmer3**, see http://hmmer.org/documentation.html.  
-**To download MatE (PF01554) domain**, go to http://pfam.xfam.org/family/mate#tabview=tab6.  
-**To retrieve MatE domain containing proteins** from the target proteome with gathering threshold option, use the following commands:
+**5.** Now, you are ready to classify the MATEs of your target plant species. **If you already have query protein sequences in a file, go to step 6.** Query sequences (i.e. the MatE-domain (PF01554) containing proteins of your target species) can be obtained by hmmsearch with hmmer3 tool. **To install hmmer3**, see http://hmmer.org/documentation.html. **To download MatE (PF01554) domain**, go to http://pfam.xfam.org/family/mate#tabview=tab6. **To retrieve MatE domain containing proteins** from the target proteome with gathering threshold option, use the following commands with your file_names and paths:
    ```
-       hmmsearch --cut_ga --tblout QuerySpecies.table -o QuerySpecies.out --noali MatE.hmm QuerySpeciesProteomeFile
-       grep -v "#" QuerySpecies.table > QuerySpecies.table1
-       awk -F " " '{print $1}' QuerySpecies.table1 | sort -u > QuerySpeciesGeneIDs
-       seqtk subseq QuerySpeciesProteomeFilea QuerySpeciesGeneIDs > QuerySpeciesMATEs.fa
+       hmmsearch --cut_ga --tblout path/to/QuerySpecies.table -o path/to/QuerySpecies.out --noali path/to/MatE.hmm path/to/QuerySpeciesProteomeFile
+       grep -v "#" path/to/QuerySpecies.table | awk -F " " '{print $1}' | sort -u > path/to/QuerySpeciesGeneIDs
+       seqtk subseq path/to/QuerySpeciesProteomeFile path/to/QuerySpeciesGeneIDs > path/to/QuerySpeciesMATEs.fa
    ```
    
 **6.** Copy your query protein sequence file into XYZ. Make sure that the fasta header of your query protein sequences contain only the gene_identifier and no other attributes (for example, see TaMATEs.fa).
