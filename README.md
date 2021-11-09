@@ -55,17 +55,23 @@ Three tools are necessiated to perform the automatic classification of MATEs in 
 
 1. Create a new directory (lets name it as XYZ).
 
-2. Copy **TaMATEs.fa**, **RefPlantMATEs.fa**, and **PlantMATEsClassification.sh** files from the PlantMATEsClassification-main directory into the newly created XYZ directory.
+2. Copy **TaMATEs.fa**, **RefPlantMATEs.fa**, **PlantMATEsClassification.sh**, **TaMATEsClassificationLogOriginal** and **TaMATEsClassificationSummaryOriginal** files from the PlantMATEsClassification-main directory into the newly created XYZ directory.
 
-3. Open terminal and navigate to the XYZ directory (alternatively you can browse into XYZ and open the terminal there). Once you navigate to the XYZ directory in the terminal, run **chmod +x PlantMATEsClassification.sh** to make the script file as executable (alternatively browse into XYZ --> right click on PlantMATEsClassification.sh --> Properties --> Permissions and tick the Execute: option).
+3. Open terminal and navigate to the XYZ directory (alternatively you can browse into XYZ and open the terminal there). Once you navigate to the XYZ directory in the terminal, run **```chmod +x PlantMATEsClassification.sh```** to make the script file as executable (alternatively browse into XYZ --> right click on PlantMATEsClassification.sh --> Properties --> Permissions and tick the Execute: option).
 
-4. Depending on the seqkit, blast+ and datamash environment, run the script file using the command **./PlantMATEsClassification.sh** in the terminal. You will get the results within 7 seconds using 10 threads. Compare the results file i.e. TaMATEsClassificationLog and TaMATEsClassificationSummary to**Once you get results sucessfully, go to step 5.** Otherwise, make sure whether you run the script in the correct environment, whether the tools are installed successfully and/or whether you properly exported the tool's path to ~/.bashrc.
+4. Depending on the seqkit, blast+ and datamash environment, run the script file using the command **```./PlantMATEsClassification.sh```** in the terminal. You will get the results within 7 seconds using 10 threads. Compare the output files TaMATEsClassificationLog and TaMATEsClassificationSummary with TaMATEsClassificationLogOriginal and TaMATEsClassificationSummaryOriginal, respectively, using the commands:
+
+   **```diff -qs <(tail -n +2 TaMATEsClassificationLogOriginal) <(tail -n +2 TaMATEsClassificationLog)```**
+   
+   **```diff -qs TaMATEsClassificationSummaryOriginal TaMATEsClassificationSummary```**
+
+   **If the outputs are "Files ... and ... are identical", go to step 5.** Otherwise, make sure whether you run the script in the correct environment, whether the tools are installed successfully and/or whether you properly exported the tool's path to ~/.bashrc.
 
 5. Now, you are ready to classify the MATEs of your target plant species. **If you already have query sequences in a file, go to step 6.** Query sequences (i.e. the MATE-domain (PF01554) containing proteins of your target species) can be obtained by hmmsearch with hmmer3 tool against your target proteome or by using the keyword PF01554 from any public databases (e.g. https://phytozome-next.jgi.doe.gov/). I prefer the hmmsearch method (because, here, we can limit the occurences of non-MATE sequences using gathering threshold (--cut_ga) option) over the public database search (which always includes many non-MATE sequences). To install hmmer3 see http://hmmer.org/documentation.html.
 
 6. Copy your query sequence file into XYZ. Make sure that the fasta header of your query sequences contain only the gene_identifier and no other attributes (for example, see TaMATEs.fa).
 
-7. Check line 26 in the PlantMATEsClassification.sh file and input the name of your query_ProteinSequence_file. Followed by, call the script using the command **./PlantMATEsClassification.sh** in the terminal as described in step 4. You will get the results within few seconds based on your query size.
+7. Check line 26 in the PlantMATEsClassification.sh file and input the name of your query_ProteinSequence_file. Followed by, call the script using the command **```./PlantMATEsClassification.sh```** in the terminal as described in step 4. You will get the results within few seconds based on your query size.
 
 **For more details, go through the pipeline which includes detailed comments for each and every step.**
 
