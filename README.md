@@ -1,11 +1,11 @@
-# 2021-11-08
+# 2021-11-09
 
 # Classification of the MATE gene family in plants
 
 # Background
 Multidrug and toxic compound extrusion (MATE) proteins form one of the major multidrug transporter families that mediate multiple functions in plants through the efflux of diverse substrates including organic molecules, specialized metabolites, hormones and xenobiotics. They are ubiquitous in all three domains of life and represent a multigene family in plants with a tremendous copy number and functional novelties.
 
-# Research probelm
+# Probelm
 MATE gene family has been studied well in various plant species and classified into several groups and/or subgroups based on the phylogenetic topology. Notably, all the published MATE gene family studies examined only a limited number (i.e. <5) of plant species and named the phylogenetic clades on their own. **Since a large-scale phylogenomic study has never been conducted as well as a systematic classification has never been proposed, clear contradiction occurs on the naming of groups/ subgroups among the published genome-wide studies of plant MATEs** (see _Table 1_).
 
 **Table 1 |** Discrepancy in the classification of plant MATE gene family (_CGS* denotes clade, class, group and/ or subfamily_)
@@ -67,9 +67,9 @@ Three tools are necessiated to perform the automatic classification of MATEs in 
 
    **If the outputs are "Files ... and ... are identical", go to step 5.** Otherwise, make sure whether you run the script in the correct environment, whether the tools are installed successfully and/or whether you properly exported the tool's path to ~/.bashrc.
 
-5. Now, you are ready to classify the MATEs of your target plant species. **If you already have query sequences in a file, go to step 6.** Query sequences (i.e. the MATE-domain (PF01554) containing proteins of your target species) can be obtained by hmmsearch with hmmer3 tool against your target proteome or by using the keyword PF01554 from any public databases (e.g. https://phytozome-next.jgi.doe.gov/). I prefer the hmmsearch method (because, here, we can limit the occurences of non-MATE sequences using gathering threshold (--cut_ga) option) over the public database search (which always includes many non-MATE sequences). To install hmmer3 see http://hmmer.org/documentation.html.
+5. Now, you are ready to classify the MATEs of your target plant species. **If you already have query protein sequences in a file, go to step 6.** Query sequences (i.e. the MATE-domain (PF01554) containing proteins of your target species) can be obtained by hmmsearch with hmmer3 tool against your target proteome or by using the keyword PF01554 from any public databases (e.g. https://phytozome-next.jgi.doe.gov/). I prefer the hmmsearch method (because, here, we can limit the occurences of non-MATE sequences using gathering threshold (--cut_ga) option) over the public database search (which always includes many non-MATE sequences). To install hmmer3 see http://hmmer.org/documentation.html.
 
-6. Copy your query sequence file into XYZ. Make sure that the fasta header of your query sequences contain only the gene_identifier and no other attributes (for example, see TaMATEs.fa).
+6. Copy your query protein sequence file into XYZ. Make sure that the fasta header of your query protein sequences contain only the gene_identifier and no other attributes (for example, see TaMATEs.fa).
 
 7. Check line 26 in the PlantMATEsClassification.sh file and input the name of your query_ProteinSequence_file. Followed by, call the script using the command **```./PlantMATEsClassification.sh```** in the terminal as described in step 4. You will get the results within few seconds based on your query size.
 
@@ -79,4 +79,4 @@ Three tools are necessiated to perform the automatic classification of MATEs in 
 The piepline is suitable to classify the MATEs of angiosperms. Classification of MATEs from primitive organisms (e.g. algae) is highly unlikely.
 And, I have no idea whether the RefPlantMATEs dataset is usable to classify MATEs from gymnosperms.
 
-#❗️for any queries reach me at: pselva7@gmail.com
+**#❗️for any queries reach me at:** pselva7@gmail.com
