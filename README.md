@@ -81,12 +81,13 @@ Three tools are necessiated to perform the automatic classification of MATEs in 
    
 **6.** Copy your query protein sequence file into XYZ. Make sure that the fasta header of your query protein sequences contain only the gene_identifier and no other attributes (for example, see TaMATEs.fa).
 
-**7.** Check line 26 in the PlantMATEsClassification.sh file and input the name of your query_ProteinSequence_file. Followed by, call the script using the command **```./PlantMATEsClassification.sh```** in the terminal as described in step 4. You will get the results within few seconds based on your query size.
+**7.** Check line 16 in the PlantMATEsClassification.sh file and input the name of your query_ProteinSequence_file. Followed by, call the script using the command **```./PlantMATEsClassification.sh```** in the terminal as described in step 4. You will get the results within few seconds based on your query size.
 
 **For more details, go through the pipeline which includes detailed comments for each and every step.**
 
 # Limitations
 The piepline is suitable to classify the MATEs of angiosperms. Classification of MATEs from primitive organisms (e.g. algae) is highly unlikely.
 And, I have no idea whether the RefPlantMATEs dataset is usable to classify MATEs from gymnosperms. It is because, no gymnosperm species was analzyed in our study.
+2023-07-05: I have checked the classification pipeline to classify gymosperm MATEs. It works, suggesting that the conservation of MATEs among angiosperms and gymnosperms is siginificant.
 
 **#❗️for any queries reach me at:** pselva7@gmail.com
